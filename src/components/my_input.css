@@ -1,0 +1,54 @@
+.my_input {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid var(--primaryColor);
+    padding-left: 8px;
+    cursor: text;
+    background-color: white;
+}
+
+.my_input input {
+    appearance: none;
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.my_input input::placeholder {
+    color: black;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.my_input:focus-within {
+    box-shadow: 0 0 10px var(--primaryColor);
+}
+
+.my_input textarea {
+    margin-top: 10px;
+    resize: none;
+    -webkit-resize: none;
+    appearance: none;
+    width: 98%;
+    height: auto;
+    outline: none;
+    border-radius: 1px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.my_input textarea::placeholder {
+    color: black;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

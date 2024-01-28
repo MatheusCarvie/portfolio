@@ -1,0 +1,14 @@
+.text_button {
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    color: black;
+    padding: 30px 10px;
+    transition: color 0.3s ease, border-bottom 0.1s ease, margin-bottom 0.1s ease;
+}
+
+.text_button:hover {
+    margin-bottom: 8px;
+    color: var(--secondaryColor) !important;
+    border-bottom: 4px solid var(--primaryColor);
+}

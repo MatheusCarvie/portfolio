@@ -1,0 +1,31 @@
+.my_button {
+    user-select: none;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    font-weight: 900;
+    appearance: none;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    background-color: var(--primaryColor);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.my_button:hover {
+    background-color: var(--secondaryColor);
+}
+
+.my_button .line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.my_button .line span {
+    position: relative;
+    color: white;
+}
