@@ -12,8 +12,8 @@ export default function MyInput({ type, placeholder, required = true, name }) {
 
     return (
         <div className="my_input" onClick={handleClick}>
-            {type != "area" && <input name={name} ref={referInput} required={required} type={type} placeholder={placeholder} />}
-            {type == "area" && <textarea name={name} ref={referArea} required={required} placeholder={placeholder} cols="30" rows="10"></textarea>}
+            {type != "area" && <input autoComplete="off" name={name} ref={referInput} required={required} type={type} placeholder={placeholder} />}
+            {type == "area" && <textarea autoComplete="off" name={name} ref={referArea} required={required} placeholder={placeholder} cols="30" rows="10"></textarea>}
         </div>
     )
 }

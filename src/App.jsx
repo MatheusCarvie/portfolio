@@ -24,7 +24,6 @@ import MyInput from './components/my_input'
 
 export default function App() {
   const [isScroll, setIsScroll] = useState(false);
-  const [scrollValue, setScrollValue] = useState(0);
 
   // Cria um ouvinte que vai obter o valor atual do scroll no eixo Y
   useEffect(() => {
@@ -36,9 +35,23 @@ export default function App() {
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
-    setScrollValue(scrollY);
     setIsScroll(scrollY > 10);
   };
+
+  const scrollToElement = (id) => {
+    const element = document.getElementById(id);
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - (80 - window.scrollY);
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  };
+
+  const navigatePag = (url) => {
+    window.open(url, "_blank");
+  }
 
   const customStyle = {
     header: {
@@ -52,13 +65,13 @@ export default function App() {
 
   return (
     <div id='app_body'>
-      <header style={customStyle.header}>
+      <header style={customStyle.header} >
         <img src={logo} alt="tie" />
         <nav>
-          <TextButton style={customStyle.textButton} text={"Sobre min"} />
-          <TextButton style={customStyle.textButton} text={"Habilidades"} />
-          <TextButton style={customStyle.textButton} text={"Projetos"} />
-          <MyButton style={{ marginLeft: "10px" }} text={"Contato"} icon={"mail"} />
+          <TextButton style={customStyle.textButton} text={"Sobre min"} onClick={() => scrollToElement("two")} />
+          <TextButton style={customStyle.textButton} text={"Habilidades"} onClick={() => scrollToElement("three")} />
+          <TextButton style={customStyle.textButton} text={"Projetos"} onClick={() => scrollToElement("four")} />
+          <MyButton style={{ marginLeft: "10px" }} text={"Contato"} icon={"mail"} onClick={() => scrollToElement("five")} />
         </nav>
       </header>
       <main>
@@ -69,9 +82,9 @@ export default function App() {
             <h2>Programador FRONT-END</h2>
             <h2>Desenvolvedor de jogos</h2>
             <div className='line_buttons'>
-              <CircleButton tooltip={"Linkedin"} src={linkedinDark} srcHover={linkedin} alt={"Linkedin"} />
-              <CircleButton tooltip={"GitHub"} src={gitHubDark} srcHover={gitHub} alt={"GitHub"} />
-              <MyButton text={"Saiba mais"} />
+              <CircleButton tooltip={"Linkedin"} src={linkedinDark} srcHover={linkedin} alt={"Linkedin"} onClick={() => navigatePag("https://www.linkedin.com/in/matheuscarvie/")} />
+              <CircleButton tooltip={"GitHub"} src={gitHubDark} srcHover={gitHub} alt={"GitHub"} onClick={() => navigatePag("https://github.com/MatheusCarvie")} />
+              <MyButton text={"Saiba mais"} onClick={() => scrollToElement("two")} />
             </div>
           </article>
           <article className='right'>
@@ -83,7 +96,7 @@ export default function App() {
             </a>
           </article>
         </section>
-        <section className='two'>
+        <section className='two' id='two'>
           <article className='left'>
             <Player
               autoplay
@@ -98,7 +111,7 @@ export default function App() {
             </p>
           </article>
         </section>
-        <section className='three'>
+        <section className='three' id='three'>
           <h2>Habilidades</h2>
           <LineItem text={"ReactJS"} description={"Tenho habilidades com useState, useEffect e contextos para gerenciamento de estado eficaz, além de aplicar componentização para construir interfaces modulares. Estou sempre aprendendo para aprimorar minhas habilidades."} />
           <LineItem text={"Vite"} description={"Estou familiarizado com a criação ágil e eficaz de projetos front-end usando o Vite. Essa ferramenta proporciona uma abordagem eficiente no desenvolvimento, permitindo a construção rápida e fluida de aplicações."} />
@@ -108,19 +121,40 @@ export default function App() {
           <LineItem text={"Firebase"} description={"Tenho um conhecimento abrangente no Firebase, cobrindo áreas como autenticação, banco de dados, armazenamento de arquivos e hospedagem. Essa plataforma oferece uma gama completa de recursos que me permitem lidar com diversas funcionalidades de maneira integrada."} />
           <LineItem text={"API"} description={"Com o Axios no ReactJS, é fácil pegar dados de uma API. A integração é tranquila e eficiente, facilitando o processo de obtenção de informações."} />
         </section>
-        <section className='four'>
+        <section className='four' id='four'>
           <h2>Projetos Web 🎉</h2>
           <div className='line'>
-            <CardProjects notView={true} src={imgPortfolio} alt={"Meu portfólio"} description={"Feito com ReactJS + Vite"} />
-            <CardProjects disable={true} src={pokedex} alt={"Pokédex"} description={"Consumo de API. Em desenvolvimento"} />
-            <CardProjects disable={true} src={projeting} alt={"Projeto pessoal"} description={"Ainda em desenvolvimento. 80% concluindo"} />
+            <CardProjects
+              notView={true}
+              src={imgPortfolio}
+              alt={"Meu portfólio"}
+              description={"Feito com ReactJS + Vite"}
+              linkClick={() => navigatePag("https://github.com/MatheusCarvie/portfolio")}
+            />
+            <CardProjects
+              disable={true}
+              src={pokedex}
+              alt={"Pokédex"}
+              description={"Consumo de API. Em desenvolvimento"}
+            />
+            <CardProjects
+              disable={true}
+              src={projeting}
+              alt={"Projeto pessoal"}
+              description={"Ainda em desenvolvimento. 80% concluindo"}
+            />
           </div>
           <h2>Projeto C++/C# 🎈</h2>
           <div className='line'>
-            <CardProjects src={flaxEngine} alt={"Flax Engine"} description={"Minha colaboração em um Software Open Source."} />
+            <CardProjects
+              linkClick={() => navigatePag("https://github.com/FlaxEngine/FlaxEngine/pull/1213")}
+              viewClick={() => navigatePag("https://flaxengine.com/")}
+              src={flaxEngine}
+              alt={"Flax Engine"}
+              description={"Minha colaboração em um Software Open Source."} />
           </div>
         </section>
-        <section className='five'>
+        <section className='five' id='five'>
           <div className='container'>
             <h2>Contato 📩</h2>
             <form action="https://formsubmit.co/matheuspowerdev@gmail.com" method="POST">
@@ -137,14 +171,14 @@ export default function App() {
           <p>Copyright © 2024 Matheus Carvie. Todos os direitos reservados.</p>
         </footer>
       </main>
-      <UpArrow />
+      <UpArrow onClick={() => scrollToElement("app_body")} />
     </div>
   )
 }
 
-function UpArrow() {
+function UpArrow({ onClick }) {
   return (
-    <div className="up_arrow">
+    <div className="up_arrow" onClick={onClick}>
       <span className="material-symbols-outlined">
         arrow_upward
       </span>
@@ -163,7 +197,7 @@ function LineItem({ text, description }) {
   )
 }
 
-function CardProjects({ src, alt, description, disable, notView = false }) {
+function CardProjects({ src, alt, description, disable, viewClick, linkClick, notView = false, notLink = false }) {
   return (
     <div className='card_projects'>
       <img src={src} alt={alt} />
@@ -173,8 +207,8 @@ function CardProjects({ src, alt, description, disable, notView = false }) {
         <div className='line'>
           {!disable && (
             <>
-              {!notView && <CircleButton src={olhoDark} srcHover={olho} alt={"Visualizar"} tooltip={"Visualizar o projeto"} />}
-              <CircleButton src={linkImgDark} srcHover={linkImg} alt={"Link"} tooltip={"Visualizar o repositório"} />
+              {!notView && <CircleButton onClick={viewClick} src={olhoDark} srcHover={olho} alt={"Visualizar"} tooltip={"Visualizar o projeto"} />}
+              {!notLink && <CircleButton onClick={linkClick} src={linkImgDark} srcHover={linkImg} alt={"Link"} tooltip={"Visualizar o repositório"} />}
             </>
           )}
         </div>

@@ -81,6 +81,17 @@
   display: flex;
   flex-direction: row;
   user-select: none;
+  animation: appear 1s ease-in-out forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 #app_body .one {
