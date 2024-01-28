@@ -21,6 +21,7 @@ import projeting from "./assets/projecting.png"
 import flaxEngine from "./assets/flaxengine.png"
 import pokedex from "./assets/pokedex.png"
 import MyInput from './components/my_input'
+import game from "./assets/game.png"
 
 export default function App() {
   const [isScroll, setIsScroll] = useState(false);
@@ -107,19 +108,21 @@ export default function App() {
           <article className='right'>
             <h2>Sobre min</h2>
             <p>
-              Me chamo Matheus Vieira, conhecido como Carvie. Ingressei no mundo da programação durante a pandemia em 2020 e desde então, transformar ideias em realidade se tornou minha paixão. Dedico-me especialmente ao React.js e também desenvolvo jogos em C# e C++. A possibilidade de criar algo a partir do zero é fascinante. Estou entusiasmado para continuar aprendendo e explorando novas áreas no campo da tecnologia. Meu objetivo futuro é me especializar como Fullstack.
+              Me chamo Matheus Vieira, conhecido como Carvie. Ingressei no mundo da programação durante a pandemia em 2020 e desde então, transformar ideias em realidade se tornou minha paixão. Dedico-me especialmente ao React.js, Flutter e também desenvolvo jogos em C# e C++. A possibilidade de criar algo a partir do zero é fascinante. Estou entusiasmado para continuar aprendendo e explorando novas áreas no campo da tecnologia. Meu objetivo futuro é me especializar como Fullstack.
             </p>
           </article>
         </section>
         <section className='three' id='three'>
           <h2>Habilidades</h2>
           <LineItem text={"ReactJS"} description={"Tenho habilidades com useState, useEffect e contextos para gerenciamento de estado eficaz, além de aplicar componentização para construir interfaces modulares. Estou sempre aprendendo para aprimorar minhas habilidades."} />
+          <LineItem text={"Flutter"} description={"Tenho conhecimentos na criação de apps no Flutter, utilizando eficazmente princípios de programação orientada a objetos. Tenho experiência sólida na integração do Firebase para manipulação eficiente de dados em aplicativos móveis Flutter."} />
           <LineItem text={"Vite"} description={"Estou familiarizado com a criação ágil e eficaz de projetos front-end usando o Vite. Essa ferramenta proporciona uma abordagem eficiente no desenvolvimento, permitindo a construção rápida e fluida de aplicações."} />
           <LineItem text={"Vercel"} description={"Tenho facilidade em utilizar a plataforma Vercel para o deploy e hospedagem de aplicações web. Estou familiarizado com a simplicidade e eficiência que a Vercel oferece, tornando o processo de implantação rápido e descomplicado."} />
           <LineItem text={"Git"} description={"Tenho experiência na utilização do Git para controle de versionamento, assegurando um fluxo de trabalho eficiente e colaborativo. Estou familiarizado com as práticas que facilitam a colaboração e a organização no desenvolvimento de projetos."} />
           <LineItem text={"GitHub"} description={"O GitHub é meu cantinho preferido para guardar meus códigos e fazer push para as minhas branches com facilidade. Tenho o prazer de colaborar em projetos de código aberto, contribuindo para a comunidade de desenvolvedores."} />
           <LineItem text={"Firebase"} description={"Tenho um conhecimento abrangente no Firebase, cobrindo áreas como autenticação, banco de dados, armazenamento de arquivos e hospedagem. Essa plataforma oferece uma gama completa de recursos que me permitem lidar com diversas funcionalidades de maneira integrada."} />
           <LineItem text={"API"} description={"Com o Axios no ReactJS, é fácil pegar dados de uma API. A integração é tranquila e eficiente, facilitando o processo de obtenção de informações."} />
+          <LineItem text={"Jogos"} description={"Conhecimento em C# e C++, desenvolvo jogos em 3D utilizando game engines. Implemento mecânicas envolventes e otimizo o desempenho para criar experiências imersivas. Estou sempre explorando novas tecnologias para aprimorar meus projetos de jogos."} />
         </section>
         <section className='four' id='four'>
           <h2>Projetos Web 🎉</h2>
@@ -151,7 +154,15 @@ export default function App() {
               viewClick={() => navigatePag("https://flaxengine.com/")}
               src={flaxEngine}
               alt={"Flax Engine"}
-              description={"Minha colaboração em um Software Open Source."} />
+              description={"Minha colaboração em um Software Open Source."}
+            />
+            <CardProjects
+              notLink={true}
+              viewClick={() => navigatePag("https://drive.google.com/file/d/1uLLWJYaS7X87q4vCBckd7-wiYaQvVWL8/view?usp=sharing")}
+              src={game}
+              alt={"Jogo FPS"}
+              description={"Projeto de estudo para aprender sobre desenvolvimento de jogos."}
+            />
           </div>
         </section>
         <section className='five' id='five'>
