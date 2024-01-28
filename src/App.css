@@ -273,6 +273,10 @@
   background-color: var(--primaryColor);
 }
 
+#app_body .up_arrow:hover span {
+  filter: drop-shadow(0 0 5px var(--primaryColor));
+}
+
 #app_body .three {
   margin: 50px 50px;
   display: flex;
