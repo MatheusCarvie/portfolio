@@ -4,7 +4,7 @@
 ![Blog](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![Blog](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-![portfolio](https://github.com/MatheusCarvie/portfolio/assets/89232821/bbf53fea-d003-4671-a12d-45158d8e5232)
+[![portfolio](https://github.com/MatheusCarvie/portfolio/assets/89232821/bbf53fea-d003-4671-a12d-45158d8e5232)](https://matheuscarvie.vercel.app/)
 
 [![Blog](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheuscarvie/)
 
