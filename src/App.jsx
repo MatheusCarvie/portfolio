@@ -131,21 +131,22 @@ export default function App() {
               notView={true}
               src={imgPortfolio}
               alt={"Meu portfólio"}
-              description={"Feito com ReactJS + Vite"}
+              description={"Feito com ReactJS | Vite"}
               linkClick={() => navigatePag("https://github.com/MatheusCarvie/portfolio")}
             />
             <CardProjects
-              disable={true}
               src={pokedex}
               alt={"Pokédex"}
-              description={"Consumo de API. Em desenvolvimento"}
+              description={"Consumo de API em ReactJS | Vite | Typescript."}
+              linkClick={() => navigatePag("https://github.com/MatheusCarvie/pokedex")}
+              viewClick={() => navigatePag("https://pokedex-white.vercel.app/")}
             />
-            <CardProjects
+            {/* <CardProjects
               disable={true}
               src={projeting}
               alt={"Projeto pessoal"}
               description={"Ainda em desenvolvimento. 80% concluindo"}
-            />
+            /> */}
           </div>
           <h2>Projeto C++/C# 🎈</h2>
           <div className='line'>
