@@ -22,6 +22,7 @@ import flaxEngine from "./assets/flaxengine.png"
 import pokedex from "./assets/pokedex.png"
 import MyInput from './components/my_input'
 import game from "./assets/game.png"
+import movieAi from "./assets/movie-ai.png"
 
 export default function App() {
   const [isScroll, setIsScroll] = useState(false);
@@ -128,11 +129,11 @@ export default function App() {
           <h2>Projetos Web 🎉</h2>
           <div className='line'>
             <CardProjects
-              notView={true}
-              src={imgPortfolio}
-              alt={"Meu portfólio"}
-              description={"Feito com ReactJS | Vite"}
-              linkClick={() => navigatePag("https://github.com/MatheusCarvie/portfolio")}
+              src={movieAi}
+              alt={"MovieAI"}
+              description={"Recomendador de filmes com alta avaliação com consumo de API TMDB em NextJS | Typescript."}
+              linkClick={() => navigatePag("https://github.com/MatheusCarvie/MovieAI")}
+              viewClick={() => navigatePag("https://movie-ai-xi.vercel.app/")}
             />
             <CardProjects
               src={pokedex}
@@ -140,6 +141,13 @@ export default function App() {
               description={"Consumo de API em ReactJS | Vite | Typescript."}
               linkClick={() => navigatePag("https://github.com/MatheusCarvie/pokedex")}
               viewClick={() => navigatePag("https://pokedex-white.vercel.app/")}
+            />
+            <CardProjects
+              notView={true}
+              src={imgPortfolio}
+              alt={"Meu portfólio"}
+              description={"Feito com ReactJS | Vite"}
+              linkClick={() => navigatePag("https://github.com/MatheusCarvie/portfolio")}
             />
             {/* <CardProjects
               disable={true}
