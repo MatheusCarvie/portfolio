@@ -24,6 +24,7 @@ import MyInput from "./components/my_input";
 import game from "./assets/game.png";
 import movieAi from "./assets/movie-ai.png";
 import dohma from "./assets/dohma-home.png";
+import apis from "./assets/APIs.png";
 
 export default function App() {
   const [isScroll, setIsScroll] = useState(false);
@@ -150,11 +151,10 @@ export default function App() {
               Angular, Flutter e também desenvolvo jogos em C# e C++. A
               possibilidade de criar algo a partir do zero é fascinante. Estou
               entusiasmado para continuar aprendendo e explorando novas áreas no
-              campo da tecnologia. Meu objetivo futuro é me especializar como
-              Fullstack. <br /> <br /> Tenho conhecimento em backend,
-              especialmente em NodeJS com Express e NestJs, e estou focado em me
-              especializar ainda mais nessa área, apesar de ter mais experiência
-              no frontend.
+              campo da tecnologia.
+              <br /> <br /> Tenho conhecimento em backend, especialmente em
+              NodeJS com Express e NestJs, e estou focado em me especializar
+              ainda mais nessa área, apesar de ter mais experiência no frontend.
             </p>
           </article>
         </section>
@@ -239,10 +239,19 @@ export default function App() {
             <CardProjects
               src={dohma}
               alt={"Dohma"}
-              notView={true}
+              notLink={true}
               description={"Cardápio digital feito com Angular"}
-              linkClick={() =>
+              viewClick={() =>
                 navigatePag("https://www.dohmagastrobar.com.br/")
+              }
+            />
+            <CardProjects
+              src={apis}
+              alt={"Api"}
+              description={"API feita em NodeJs + Express"}
+              notView={true}
+              linkClick={() =>
+                navigatePag("https://github.com/MatheusCarvie/Pizzaria-NodeJS")
               }
             />
             <CardProjects
@@ -384,6 +393,7 @@ function CardProjects({
             <>
               {!notView && (
                 <CircleButton
+                  pulse={true}
                   onClick={viewClick}
                   src={olhoDark}
                   srcHover={olho}
@@ -393,6 +403,7 @@ function CardProjects({
               )}
               {!notLink && (
                 <CircleButton
+                  pulse={true}
                   onClick={linkClick}
                   src={linkImgDark}
                   srcHover={linkImg}
