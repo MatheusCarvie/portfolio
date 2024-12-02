@@ -144,17 +144,21 @@ export default function App() {
           <article className="right">
             <h2>Sobre min</h2>
             <p>
-              Me chamo Matheus Vieira, conhecido como Carvie. Ingressei no mundo
-              da programação durante a pandemia em 2020 e desde então,
-              transformar ideias em realidade se tornou minha paixão. Dedico-me
-              especialmente ao ReactJs para Web, React Native para mobile,
-              Angular, Flutter e também desenvolvo jogos em C# e C++. A
-              possibilidade de criar algo a partir do zero é fascinante. Estou
-              entusiasmado para continuar aprendendo e explorando novas áreas no
-              campo da tecnologia.
-              <br /> <br /> Tenho conhecimento em backend, especialmente em
-              NodeJS com Express e NestJs, e estou focado em me especializar
-              ainda mais nessa área, apesar de ter mais experiência no frontend.
+              Me chamo Matheus Vieira, conhecido como Carvie, e sou apaixonado
+              por transformar ideias em realidade através da tecnologia. Minha
+              jornada na programação começou durante a pandemia em 2020, e desde
+              então venho me dedicando a aprender e evoluir constantemente.
+              <br /> <br /> Tenho experiência na criação de APIs com NodeJS e
+              Express utilizando boas práticas como DDD e já desenvolvi APIs
+              usando ASP.NET.
+              <br /> <br /> Desenvolvo aplicações Web utilizando frameworks
+              modernos como Next.js, Vite e Angular.
+              <br /> <br />
+              Desenvolvo aplicativos móveis com Flutter e React Native,
+              aplicando princípios de POO e integrando Firebase para
+              gerenciamento de dados. Além disso, tenho experiência no
+              desenvolvimento de jogos em 3D com C# e C++, focando em mecânicas
+              imersivas e desempenho otimizado.
             </p>
           </article>
         </section>
